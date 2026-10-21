@@ -1,0 +1,90 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "p4_prep",
+  "position": {
+    "x": 860,
+    "y": 105,
+    "z": 2000,
+    "height": 595,
+    "width": 400,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cleaned_zomato_data"
+                    }
+                  },
+                  "Property": "Type_of_order"
+                }
+              },
+              "queryRef": "cleaned_zomato_data.Type_of_order",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cleaned_zomato_data"
+                    }
+                  },
+                  "Property": "Avg Prep Time (min)"
+                }
+              },
+              "queryRef": "cleaned_zomato_data.Avg Prep Time (min)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cleaned_zomato_data"
+                    }
+                  },
+                  "Property": "Avg Delivery Time (min)"
+                }
+              },
+              "queryRef": "cleaned_zomato_data.Avg Delivery Time (min)"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Preparation vs Delivery Time'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

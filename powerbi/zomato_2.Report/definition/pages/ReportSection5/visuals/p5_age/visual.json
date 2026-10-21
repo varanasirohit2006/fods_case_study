@@ -1,0 +1,142 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "p5_age",
+  "position": {
+    "x": 860,
+    "y": 105,
+    "z": 2000,
+    "height": 595,
+    "width": 400,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Details": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cleaned_zomato_data"
+                    }
+                  },
+                  "Property": "Delivery_person_ID"
+                }
+              },
+              "queryRef": "cleaned_zomato_data.Delivery_person_ID",
+              "active": true
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cleaned_zomato_data"
+                    }
+                  },
+                  "Property": "Delivery_person_Age"
+                }
+              },
+              "queryRef": "cleaned_zomato_data.Delivery_person_Age",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cleaned_zomato_data"
+                    }
+                  },
+                  "Property": "Time_taken_min"
+                }
+              },
+              "queryRef": "cleaned_zomato_data.Time_taken_min",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Partner Age vs Delivery Duration'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "26b08a84364509b284a4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cleaned_zomato_data"
+              }
+            },
+            "Property": "Delivery_person_Age"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ebc082ee229e0b297b63",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cleaned_zomato_data"
+              }
+            },
+            "Property": "Time_taken_min"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "82211335b257e5b92acd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cleaned_zomato_data"
+              }
+            },
+            "Property": "Delivery_person_ID"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

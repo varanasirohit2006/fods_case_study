@@ -1,0 +1,123 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "p1_type",
+  "position": {
+    "x": 650.4309954940619,
+    "y": 450.08727114357026,
+    "z": 2000,
+    "height": 270,
+    "width": 600,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cleaned_zomato_data"
+                    }
+                  },
+                  "Property": "Type_of_order"
+                }
+              },
+              "queryRef": "cleaned_zomato_data.Type_of_order",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cleaned_zomato_data"
+                    }
+                  },
+                  "Property": "Avg Delivery Time (min)"
+                }
+              },
+              "queryRef": "cleaned_zomato_data.Avg Delivery Time (min)"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Order Type and Festival Performance'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5f5172bfc7fd4a6506dc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cleaned_zomato_data"
+              }
+            },
+            "Property": "Type_of_order"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "353de504336102b91857",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cleaned_zomato_data"
+              }
+            },
+            "Property": "Avg Delivery Time (min)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "db1c912856661d69c961",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cleaned_zomato_data"
+              }
+            },
+            "Property": "Festival"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

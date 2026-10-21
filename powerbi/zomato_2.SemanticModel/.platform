@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "zomato_2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5bbc077f-1ae1-4794-bc10-580669c7b8d3"
+  }
+}

@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments & virtualenvs
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Node modules & build artifacts
+node_modules/
+**/node_modules/
+dist/
+dist-ssr/
+frontend/dist/
+frontend/dist-ssr/
+
+# IDEs & Editor caches
+.vscode/
+.idea/
+.opencode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
